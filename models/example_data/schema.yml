@@ -1,0 +1,19 @@
+
+version: 2
+
+models:
+    - name: example_data
+      description: "A sample dataset using environment variables"
+      columns:
+          - name: foo
+            description: "Odd Numbers"
+            tests:
+                - unique
+                - not_null
+          - name: bar
+            description: "Even Numbers"
+            tests:
+                - unique
+                - not_null
+
+
