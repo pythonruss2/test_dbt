@@ -1,0 +1,18 @@
+# Reference this view as dev__example_data
+schema: DEV
+table_name: EXAMPLE_DATA
+
+dimensions:
+  foo:
+    sql: '"FOO"'
+
+  bar:
+    sql: '"BAR"'
+
+  test:
+    sql: ${dev__example_data.foo}/${dev__example_data.bar}
+    label: Test
+
+measures:
+  count:
+    aggregate_type: count
