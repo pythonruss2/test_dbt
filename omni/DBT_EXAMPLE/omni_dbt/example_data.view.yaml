@@ -1,8 +1,9 @@
-# Reference this view as dev__example_data
+# Reference this view as omni_dbt__example_data
+schema_label: ""
 #This description was pulled from dbt.
 description: A sample dataset using environment variables
 
-schema: DEV
+schema: omni_dbt
 table_name: EXAMPLE_DATA
 
 dimensions:
@@ -15,10 +16,6 @@ dimensions:
     sql: '"BAR"'
     #This description was pulled from dbt.
     description: Even Numbers
-
-  test:
-    sql: ${dev__example_data.foo}/${dev__example_data.bar}
-    label: Test
 
 measures:
   count:
