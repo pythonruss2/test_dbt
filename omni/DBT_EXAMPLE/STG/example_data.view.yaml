@@ -1,0 +1,33 @@
+# Reference this view as stg__example_data
+#This description was pulled from dbt.
+description: A sample dataset using environment variables
+
+schema: STG
+table_name: EXAMPLE_DATA
+
+dimensions:
+  foo:
+    sql: '"FOO"'
+    #This description was pulled from dbt.
+    description: Odd Numbers
+
+  bar:
+    sql: '"BAR"'
+    #This description was pulled from dbt.
+    description: Even Numbers
+
+measures:
+  count:
+    aggregate_type: count
+
+#The info below was pulled from your dbt repository and is read-only.
+dbt:
+  name: example_data
+  target_schema: STG
+  description: A sample dataset using environment variables
+  config:
+    materialized: table
+  code: |-
+    {% for i in range(10): %}
+        select {{ i }} as foo, {{ i + 1 }} as bar {% if not loop.last %} union all {% endif %}
+    {% endfor %}
