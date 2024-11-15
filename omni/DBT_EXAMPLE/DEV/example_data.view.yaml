@@ -20,6 +20,11 @@ dimensions:
     sql: ${dev__example_data.foo}/${dev__example_data.bar}
     label: Test
 
+  sum_of_foobartest:
+    sql: ${dev__example_data.test} + ${dev__example_data.foo} +
+      ${dev__example_data.bar}
+    label: Sum of foobartest
+
 measures:
   count:
     aggregate_type: count
