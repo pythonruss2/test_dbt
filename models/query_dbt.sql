@@ -1,1 +1,1 @@
-select 1
+select foo from "DEV"."EXAMPLE_DATA"
