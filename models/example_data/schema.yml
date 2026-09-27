@@ -7,6 +7,7 @@ models:
       columns:
           - name: foo
             description: "Odd Numbers"
+            description: Odd Numbers (omni initiated change) -- extended!
             tests:
                 - unique
                 - not_null
