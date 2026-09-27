@@ -6,7 +6,7 @@ models:
       description: "A sample dataset using environment variables"
       columns:
           - name: foo
-            description: "Odd Numbas"
+            description: Odd Numbers (omni initiated change) -- extended!
             tests:
                 - unique
                 - not_null
